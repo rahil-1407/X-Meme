@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>XMeme</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+	<section class="section_name">
+		<div class="title">
+			<hr>
+			<h1><h1 class="form__data"><strong><u>Meme Stream</u></strong></h1>
+		</div>
+		
+		<div class="form__data">
+			<% if(typeof err != 'undefined') {%>
+				<h3> <%= err %> </h3>
+				 <% } %>
+			<form action='/' method="post">
+                <label for="full_name"><strong>Meme Owner</strong></label><br>
+				<input type="text" name="Fullname" placeholder="Enter Your Full Name"> <br> <br>
+
+                <label for="Caption"><strong>Caption</strong></label><br>
+                <input type="text" name="Caption" placeholder="Be Creative With the Caption!!"> <br> <br>
+
+                <label for="Meme URL"><strong>Meme URL</strong></label><br>
+                <input type="url" name="URL" placeholder="Enter URL of your MEME here"> <br>
+
+				<br> <br>
+				<input type="Submit">
+			</form>
+
+			<div id="scroll">
+				
+			   <% if (typeof(problem) != 'undefined') { %>
+				<h3> <%= problem %> </h3>
+				<%} 
+				else { %>
+					<% for (var i =0; i<memeList.length; i++ ) { %>
+						<h2> Name: <%= JSON.stringify(memeList[i].name)%> </h2>
+						<h3> Caption: <i><%= JSON.stringify(memeList[i].caption)%></i> </h3>
+						<img src="<%= encodeURI(memeList[i].url)%>" alt="Some Error Occurred in displaying Image"
+							height=250 style="width:100%; height:100%" onerror=this.src="https://static.thenounproject.com/png/741653-200.png">
+						<br>
+						<% } %>
+				<% } %>
+
+			</div>
+
+			<br> <br>
+		</div>
+	</section>
+</body>
+</html>
