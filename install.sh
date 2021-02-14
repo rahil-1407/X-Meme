@@ -9,4 +9,4 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 sudo apt -y update
 sudo apt install -y mongodb-org
 sudo systemctl start mongod
-sudo systemctl status mongod
+
