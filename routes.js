@@ -77,7 +77,7 @@ routes.post('/memes',(req,res) =>{
     })
 
     memeData.save().then((returnId) =>{
-        console.log("Data Saved in DB through API")
+        //console.log("Data Saved in DB through API")
         res.setHeader('Content-Type', 'application/json');
         res.json({id:returnId.id})
     }).catch((err) =>{
