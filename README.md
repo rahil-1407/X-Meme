@@ -48,51 +48,51 @@ Database Used is MongoDB Atlas.
 
 ## API Endpoints
 
-- Endpoint to send a meme to the backend:The backend allocates a unique id for the meme and return it as a json response.
-Example request 
-  `curl --location --request POST 'http://<Server_URL>/memes' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
-  "name":"ashok kumar",
-  "url": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg",
-  "caption": "This is a meme"
-  }'
-` 
-Sample response
-  `{
-  "id": "1"
-  }
-  `
-- Endpoint to fetch the latest 100 memes created from the backend
-Example request
-`curl --location --request GET 'http://<Server_URL>/memes'`
-`
-Response
-[
-   {
-"id": "1",       
-"name": "MS Dhoni",
-"url": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg",
-"caption": "Meme for my place"
-    },
-    {
-"id": "2",
-"name": "Viral Kohli",
-"url": "https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg",
-"caption": "Another home meme"
-    }
-]`
+- Endpoint to send a meme to the backend:The backend allocates a unique id for the meme and return it as a json response. <br />
+Example request <br />
+      `curl --location --request POST 'http://<Server_URL>/memes' \
+      --header 'Content-Type: application/json' \
+      --data-raw '{
+      "name":"ashok kumar",
+      "url": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg",
+      "caption": "This is a meme"
+      }'
+    ` 
+    Sample response<br />
+      `{
+      "id": "1"
+      }
+      `
+- Endpoint to fetch the latest 100 memes created from the backend <br />
+Example request <br />
+    `curl --location --request GET 'http://<Server_URL>/memes'`
+    `
+    Response
+    [
+       {
+    "id": "1",       
+    "name": "MS Dhoni",
+    "url": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg",
+    "caption": "Meme for my place"
+        },
+        {
+    "id": "2",
+    "name": "Viral Kohli",
+    "url": "https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg",
+    "caption": "Another home meme"
+        }
+    ]`
 
-- Endpoint to specify a particular id (identifying the meme) to fetch a single Meme.
-Example request
-`curl --location --request GET 'http://<Server_URL>/memes/<id>'`
-`
-Response
-{
-"id": "1",       
-"name": "MS Dhoni",
-"url": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg",
-"caption": "Meme for my place"
-}
-`
-  
+- Endpoint to specify a particular id (identifying the meme) to fetch a single Meme. <br />
+Example request <br />
+    `curl --location --request GET 'http://<Server_URL>/memes/<id>'`
+    `
+    Response
+    {
+    "id": "1",       
+    "name": "MS Dhoni",
+    "url": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg",
+    "caption": "Meme for my place"
+    }
+    `
+
